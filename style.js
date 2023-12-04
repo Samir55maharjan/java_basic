@@ -139,7 +139,114 @@ const str= 'i`m "samir"';
 //array
 // const fruits= new Array('apple' ,'mango'); //old way
 //new method
-const fruits=['apple', 'mango', 'kra']
+const fruits=['apple', 'mango', 'kra','orange','grapes']
 console.log(fruits);
+// //access
+// console.log(fruits);
+// console.log(fruits[1])
 
+//length
+// console.log(fruits.length)
+
+//adding elements
+// fruits[3] = 'pineapple';
+// fruits [5] = 'kiwi';
+
+//array method
+// fruits.push('cherry') :: add in for last element
+
+// //remove elements
+// fruits.pop('cherry'); ;; remove last element
+// console.log(fruits)
+
+
+//splice: remove the items between
+// fruits.splice(2, 2) // first is starting and 2nd is how many to delete)
+// fruits.splice(1,2, 'passionfruit')
+
+//first element remove :: 
+// fruits.shift();
+
+// //first element add ::
+// fruits.unshift('potato','tomato');
+
+//index of :: to knoe the index of the element
+
+// console.log(fruits.indexOf('qpple'))
+
+// const veges= ['garlic','potato','pasta'];
+// const vegesAndFruits = fruits.concat(veges)
+// console.log(fruits, veges, vegesAndFruits)
+
+// console.log(fruits)
+
+//mutating arrays:: change from reference to premitive
+// console.log(fruits)
+// console.log(...fruits)
+
+// const newFruits =[...fruits];
+//  newFruits.push('berries');
+//  newFruits.shift();
+
+//  console.log(newFruits);
+
+
+
+
+
+// //reference data type
+// const newFruits = fruits;
+
+// newFruits.push('berries');
+
+// console.log(newFruits)
+// console.log(fruits)
+
+// //premitive
+// const addres='rockdale';
+// let myAddress = addres;
+// myAddress= 'hurstville';
+// console.log(myAddress, addres);
+// //
+
+
+//for loop to convert all into capital
+let uppercaseFruits=[];
+for(let i=0; i < fruits.length; i++) {
+    console.log(fruits[i].toUpperCase());
+    uppercaseFruits.push(fruits[i].toUpperCase())
+}
+console.log(uppercaseFruits);
+
+//for each :: only for array
+
+// fruits.forEach(element => {
+//     // console.log(element)
+// });
+
+//map:: it returns array
+const mappedFruits=fruits.map(fruit => {
+    console.log('this is printed from the map', fruit);
+    return fruit.toUpperCase();
+});
+console.log(mappedFruits)
+
+//includes:: check something is there or not
+
+console.log(fruits.includes('mango'));
+
+//every:: 
+console.log(fruits.every (element =>element.length>5))
+
+//some:: if only one is true its true
+console.log(fruits.some (element => element.includes('a')))
+
+
+//filter:: 
+const filteredFruits=fruits.filter(element =>element.length > 5);
+console.log(filteredFruits)
+
+//slice vs splice
+
+//Reduce
 
