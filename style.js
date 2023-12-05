@@ -112,7 +112,7 @@
 //string
 //escape character (\)
 
-const str= 'i`m "samir"';
+// const str= 'i`m "samir"';
 // const val= str.toUpperCase();
 // console.log(val);
 
@@ -139,8 +139,8 @@ const str= 'i`m "samir"';
 //array
 // const fruits= new Array('apple' ,'mango'); //old way
 //new method
-const fruits=['apple', 'mango', 'kra','orange','grapes']
-console.log(fruits);
+// const fruits=['apple', 'mango', 'kra','orange','grapes']
+// console.log(fruits);
 // //access
 // console.log(fruits);
 // console.log(fruits[1])
@@ -211,42 +211,112 @@ console.log(fruits);
 
 
 //for loop to convert all into capital
-let uppercaseFruits=[];
-for(let i=0; i < fruits.length; i++) {
-    console.log(fruits[i].toUpperCase());
-    uppercaseFruits.push(fruits[i].toUpperCase())
-}
-console.log(uppercaseFruits);
+// let uppercaseFruits=[];
+// for(let i=0; i < fruits.length; i++) {
+//     console.log(fruits[i].toUpperCase());
+//     uppercaseFruits.push(fruits[i].toUpperCase())
+// }
+// console.log(uppercaseFruits);
 
-//for each :: only for array
+// //for each :: only for array
 
-// fruits.forEach(element => {
-//     // console.log(element)
+// // fruits.forEach(element => {
+// //     // console.log(element)
+// // });
+
+// //map:: it returns array
+// const mappedFruits=fruits.map(fruit => {
+//     console.log('this is printed from the map', fruit);
+//     return fruit.toUpperCase();
 // });
+// console.log(mappedFruits)
 
-//map:: it returns array
-const mappedFruits=fruits.map(fruit => {
-    console.log('this is printed from the map', fruit);
-    return fruit.toUpperCase();
-});
-console.log(mappedFruits)
+// //includes:: check something is there or not
 
-//includes:: check something is there or not
+// console.log(fruits.includes('mango'));
 
-console.log(fruits.includes('mango'));
+// //every:: 
+// console.log(fruits.every (element =>element.length>5))
 
-//every:: 
-console.log(fruits.every (element =>element.length>5))
-
-//some:: if only one is true its true
-console.log(fruits.some (element => element.includes('a')))
+// //some:: if only one is true its true
+// console.log(fruits.some (element => element.includes('a')))
 
 
-//filter:: 
-const filteredFruits=fruits.filter(element =>element.length > 5);
-console.log(filteredFruits)
+// //filter:: 
+// const filteredFruits=fruits.filter(element =>element.length > 5);
+// console.log(filteredFruits)
 
 //slice vs splice
 
-//Reduce
 
+//calculate sum for/foreach [2,4,6,8]
+// let num=[2,4,6,8];
+// sum=0;
+// for(let i=0; i<num.length; i++ ) {
+//     // console.log(i);
+//     sum= sum+ num[i];
+//     console.log(sum);
+// }
+
+
+//for each
+let num=[2,4,6,8];
+let sum=0
+
+num.forEach = (numb1 => {
+    sum =sum + numb1;
+    console.log("sum of number ",sum)
+});
+
+
+//reduce
+// 
+const result=num.reduce ((previousValue, currentValue) => 
+
+    previousValue + currentValue
+    , 0
+    );
+    console.log(result);
+
+    const result1=num.reduce ((previousNumber, currentNumber)=>
+    previousNumber * currentNumber
+    ,1
+    );
+    console.log(result1);
+
+
+    // create an array of 50 random numbers range between 1 to 100
+    
+    //creating array
+    //create loop- 50 times
+    // console.log ()
+    //use console.log (math.random)-but generates 2 digits
+    //array.push(random)
+
+    let randomNumArray=[];
+    
+    while(randomNumArray.length<50){
+        const randomNum= Math.floor(Math.random() * 99 +1);
+        if (!randomNumArray.includes(randomNum)) {
+            randomNumArray.push(randomNum);
+           
+        }
+    }
+    randomNumArray.sort();
+    randomNumArray.reverse();
+    // for(let i=0; i<50; i++){
+    //     const randomNum= Math.floor(Math.random() * 99 +1);
+    //     if (!randomNumArray.includes(randomNum)) {
+    //         randomNumArray.push(randomNum);
+    //     }
+        
+    // }
+
+    console.log(randomNumArray);
+
+    //sort descending order
+const fruits= ['apple', 'orange', 'mango', 'guava'];
+fruits.sort();
+fruits.reverse();
+console.log(fruits);
+    
